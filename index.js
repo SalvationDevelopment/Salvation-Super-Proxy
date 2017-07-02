@@ -5,19 +5,23 @@ var redbird = new require('redbird')({
   port: 80,
   ssl: {
     port: 443,
-     //certs go here iirc
-     //keys also go here
+    cert: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-cert.pem",
+    keys: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-key.pem",
     }
 
 
 });
 
 manifest.forEach(function (manifest) {
-    redbird.register(manifest.url, manifest.name, {
+    redbird.register(manifest.domain, manifest.url, {
 	ssl: {
      letsencrypt: { 
       email: process.env.EMAIL, // Domain owner/admin email
-      production: true, //WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+     production: false, //WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
     }
   }
-}, {ssl: true})});
+}, {ssl: {
+     redirectPort: 80,
+     key: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-key.pem",
+     cert: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-cert.pem",
+}})});
