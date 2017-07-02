@@ -12,11 +12,12 @@ var redbird = new require('redbird')({
 
 });
 
-//redbird.register("YGOSalvation", process.env.SITE_MAIN, {
-//	ssl: {
-//    letsencrypt: {
-//      email: process.env.EMAIL, // Domain owner/admin email
-//      //production: true, WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
-//    }
-//  }
-//});
+manifest.forEach(function (manifest) {
+    redbird.register(manifest.url, manifest.name, {
+	ssl: {
+     letsencrypt: { 
+      email: process.env.EMAIL, // Domain owner/admin email
+      production: true, //WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+    }
+  }
+}, {ssl: true})});
