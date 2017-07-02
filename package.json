@@ -1,0 +1,30 @@
+{
+  "name": "salvation-super-proxy",
+  "version": "1.0.0",
+  "description": "A super reverse proxy server for Salvation Development projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalvationDevelopment/Salvation-Super-Proxy.git"
+  },
+  "keywords": [
+    "Salvation",
+    "proxy",
+    "php"
+  ],
+  "author": "Salvation Development",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalvationDevelopment/Salvation-Super-Proxy/issues"
+  },
+  "homepage": "https://github.com/SalvationDevelopment/Salvation-Super-Proxy#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "node-php-server": "^0.1.2",
+    "redbird": "^0.6.15"
+  }
+}

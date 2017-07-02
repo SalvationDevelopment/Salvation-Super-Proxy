@@ -1,0 +1,15 @@
+[{
+  name : ygosalvation,
+  url : 'http://127.0.0.1:80'
+  application : '../salvation-server/server.js`
+},
+{
+  name : YGOSalvation,
+  url : 'forum.ygopro.us'
+  application : ''
+},
+{
+  name : 
+  url : 'http://api.ygosalvation.com'
+  application : ""
+}]
