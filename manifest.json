@@ -1,20 +1,15 @@
 [{
-  "domain" : "ygosalvation",
+  "domain" : "ygosalvation.com",
   "url" : "http://127.0.0.1:80",
   "application" : "../salvation-server/server.js"
 },
 {
-  "domain" : "forum.ygopro.us",
+  "domain" : "forum.ygosalvation.com",
   "url" : "http://127.0.0.1:8080",
-  "application" : ""
+  "application" : "./forum.js"
 },
 {
   "domain" : "api.ygosalvation.com",
   "url" : "http://127.0.0.1:8081",
-  "application" : ""
-},
-{
-  "domain" : "ygopro.us",
-  "url" : "http://127.0.0.1:8082",
-  "application" : ""
+  "application" : "../ygo_db/app.js"
 }]
