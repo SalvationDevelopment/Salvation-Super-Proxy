@@ -1,15 +1,15 @@
 [{
   "domain" : "ygosalvation.com",
-  "url" : "http://127.0.0.1:80",
+  "url" : "http://127.0.0.1:8080",
   "application" : "../salvation-server/server.js"
 },
 {
   "domain" : "forum.ygosalvation.com",
-  "url" : "http://127.0.0.1:8080",
+  "url" : "http://127.0.0.1:8081",
   "application" : "./forum.js"
 },
 {
   "domain" : "api.ygosalvation.com",
-  "url" : "http://127.0.0.1:8081",
+  "url" : "http://127.0.0.1:8082",
   "application" : "../ygo_db/app.js"
 }]
