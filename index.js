@@ -1,5 +1,5 @@
 require('dotenv').config();
-var manifest = require('manifest.json'); 
+var manifest = require("./manifest.json"); 
 
 var redbird = new require('redbird')({
   port: 80,
@@ -12,12 +12,11 @@ var redbird = new require('redbird')({
 
 });
 
-redbird.register("YGOSalvation", process.env.SITE_MAIN, {
-	ssl: {
-    letsencrypt: {
-      email: process.env.EMAIL, // Domain owner/admin email
-      //production: true, WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
-    }
-  }
-});
-
+//redbird.register("YGOSalvation", process.env.SITE_MAIN, {
+//	ssl: {
+//    letsencrypt: {
+//      email: process.env.EMAIL, // Domain owner/admin email
+//      //production: true, WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
+//    }
+//  }
+//});
