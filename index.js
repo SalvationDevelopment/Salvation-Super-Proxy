@@ -7,6 +7,9 @@ var redbird = new require('redbird')({
     port: 443,
     cert: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-cert.pem",
     keys: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-key.pem",
+    },
+  letsencrypt: {
+     path: __dirname + "/certs",
     }
 
 
