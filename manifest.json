@@ -1,20 +1,20 @@
 [{
-  name : ygosalvation,
+  name : "ygosalvation",
   url : 'http://127.0.0.1:80'
   application : '../salvation-server/server.js`
 },
 {
-  name : YGOSalvation Forum,
+  name : "YGOSalvation Forum",
   url : 'forum.ygopro.us'
   application : ''
 },
 {
-  name : YGOSalvation API,
+  name : "YGOSalvation API",
   url : 'http://api.ygosalvation.com'
   application : ""
 },
 {
-  name : YGOSalvation Main,
+  name : "YGOSalvation Main",
   url: 'ygopro.us'
   application: ""
 }]

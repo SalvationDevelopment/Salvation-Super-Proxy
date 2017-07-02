@@ -1,19 +1,13 @@
 require('dotenv').config();
-var manifest = require('manifest.json'); //this is how you load stuff right?
+var manifest = require('manifest.json'); 
 
 var redbird = new require('redbird')({
   port: 80,
   ssl: {
     port: 443,
      //certs go here iirc
-    
+     //keys also go here
     }
-
-
-
-
-
-
 
 
 });
@@ -26,3 +20,4 @@ redbird.register("YGOSalvation", process.env.SITE_MAIN, {
     }
   }
 });
+
