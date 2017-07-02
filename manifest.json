@@ -4,12 +4,17 @@
   application : '../salvation-server/server.js`
 },
 {
-  name : YGOSalvation,
+  name : YGOSalvation Forum,
   url : 'forum.ygopro.us'
   application : ''
 },
 {
-  name : 
+  name : YGOSalvation API,
   url : 'http://api.ygosalvation.com'
   application : ""
+},
+{
+  name : YGOSalvation Main,
+  url: 'ygopro.us'
+  application: ""
 }]
