@@ -1,5 +1,6 @@
 require('dotenv').config();
 var manifest = require("./manifest.json"); 
+var phpSever = require("node-php-server");
 
 var redbird = new require('redbird')({
   port: 80,
@@ -28,3 +29,13 @@ manifest.forEach(function (manifest) {
      key: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-key.pem",
      cert: "./node_modules/redbird/hl-tests/letsencrypt/certs/dev-cert.pem",
 }})});
+
+phpServer.createServer({
+    port: 8080,
+    hostname: "127.0.0.1:8080",
+    base: ".",
+    keepalive: false,
+    open: false,
+    bin: "php",
+    router: __dirname + 'server.php',
+});
