@@ -4,7 +4,7 @@
   "description": "A super reverse proxy server for Salvation Development projects.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "express": "^4.15.3",
     "node-php-server": "^0.1.2",
     "redbird": "^0.6.15"
+  },
+  "devDependencies": {
+    "nyc": "^11.0.3",
+    "chai": "*",
   }
 }
