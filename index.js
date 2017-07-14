@@ -19,7 +19,7 @@ manifest.forEach(function (manifest) {
     redbird.register(manifest.domain, manifest.url, {
 	ssl: {
      letsencrypt: { 
-      email: process.env.EMAIL, // Domain owner/admin email
+      email: process.env.EMAIL,
      production: false, //WARNING: Only use this flag when the proxy is verified to work correctly to avoid being banned!
     }
   }

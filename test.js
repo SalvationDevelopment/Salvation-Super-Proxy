@@ -8,33 +8,51 @@
 //The letsencrypt switch should be in the .env file
 //Redbird should load the manifest.json
 //Redbird should run on port 80 for HTTP and 443 for SSL
-var manifest = require('manifest.json');
-var env = require('index.env'); 
+require('dotenv').config();
+var manifest = require('./manifest.json');
+var env = require('dotenv'); 
+var http = require('http');
+var https = require('https');
+var redbird = require('redbird');
+var assert = require('chai').assert;
 
-describe("manifest", function() {
-    it('should exist for each url', function() {
+describe("manifest", function () {
+        manifest.forEach(
+            assert.exists(manifest.domain, ".json exists for each url"));
+      });
+    it('domains', function() {
       manifest.forEach(
-        manifest.domain != undefined;
-    )});
-    it('should be a valid url', function () {
+        assert.isString(manifest.domain, "are strings"));
       manifest.forEach(
-        typeof manifest.domain = 'string';
-        //node http request goes here
-    )});
+        http.get(manifest.domain, function (response) {
+          assert(response() !== 'error', "are live sites");
+      }))});
     it('should be SSL protected', function () {
       manifest.forEach(
-        //node http_s_ request goes here, this function needs to be delayed until all of the other stuff is loaded
-    )});
-});
+        https.request(manifest.domain, function (response) { //delay until entire thing is loaded
+            response() !== 'error';
+}))})});
 
 describe("node-php-server", function () {
     it('should act as Apache for forum.js', function () {
-        //uhh...need a non-terminal method to do this
+        var url = process.env.SSPFORUM;
+        url.onload = function() //delay this until entire thing is loaded
+	    {
+            console.log('Server is working!');
+	    }
 })});
 
 describe(".env file", function () {
     it('contains the letsencrypt switch as well as the domain email', function() {
-      env.email = process.env.EMAIL; //probably not the right syntax
+      env.email = process.env.EMAIL; 
 })});
 
-//Redbird checks go here
+describe("Redbird", function () {
+      assert.equal(redbird, manifest, "has the manifest.json contents"); //delay until entire thing is loaded
+});
+
+describe("Redbird", function () {
+    it('runs on port 80 for HTTP and port 443 on HTTPS', function () {
+      redbird.port = 80;
+      redbird.ssl.port = 443;
+})});
